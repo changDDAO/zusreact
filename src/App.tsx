@@ -1,25 +1,16 @@
-import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import * as React from 'react';
+import Example from "./components/Example";
+import Alert from 'react-bootstrap/Alert';
+import {Route, Routes} from "react-router-dom";
+import Test from "./components/Test";
 
-function App() {
+function App() :React.JSX.Element {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+  <Routes>
+    <Route path="/" element={<Example />} />
+    <Route path="/test" element={<Test/>} />
+  </Routes>
   );
 }
 
